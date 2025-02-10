@@ -1,0 +1,193 @@
+html,
+body {
+    background-color: white;
+    width: 100%;
+}
+.navbar {
+    background-color: #5da295;
+}
+
+.navbar-brand {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgb(255, 217, 0);
+    align-items: center;
+}
+
+.nav-link {
+    color: white;
+    font-weight: bold;
+}
+
+.logo {
+    width: 40px; 
+    height: auto; 
+    margin-right: 10px; 
+}
+
+.menu {
+    background-color: #5da295;
+}
+
+.hero {
+    margin-top: -100px;
+    display: flex; /* Menggunakan Flexbox untuk tata letak */
+    align-items: center; /* Vertikal centering untuk teks dan gambar */
+    justify-content: space-between; /* Mengatur agar elemen berada di kiri */
+    padding: 20px;
+    margin-bottom: -100px;
+    background-color: #bfddd2;
+    height: 100vh;
+    width: 100%;
+}
+
+/* Styling untuk gambar */
+.hero-image {
+    width: 500px; /* Ukuran gambar */
+    height: auto;
+    margin-top: 100px;
+    border-radius: 8px; /* Menambahkan sudut melengkung pada gambar */
+    flex-shrink: 0; /* Gambar tidak akan menyusut */
+}
+
+/* Styling untuk teks */
+.hero-text {
+    flex-grow: 1;
+    text-align: left;
+}
+
+.hero h1 {
+    font-size: 1.8rem;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    color: #555;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: italic;
+}
+
+.pembuatan-tahu {
+    padding: 40px 20px;
+    background-color: #ffffff;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.pembuatan-tahu h2 {
+    font-size: 2rem;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+
+
+/* Container untuk gambar + teks */
+.image-container {
+    position: relative;         /* Membuat posisi relatif untuk overlay */
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top: 25px;
+}
+
+/* Gambar */
+.img-fluid {
+    width: 400px;
+    height: 250px;              /* Menjaga rasio seragam */
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Teks di atas gambar */
+.overlay-text {
+    font-family: 'Poppins', sans-serif;
+    margin-top: 10px;
+}
+
+.product p,
+.contact p {
+    font-style: italic;
+}
+
+.product .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5rem;
+    justify-content: center;
+}
+
+.product .row .product-card {
+    text-align: center;
+    padding-bottom: 4rem;
+}
+
+
+.product .row .product-card img {
+    border-radius: 50%;
+    width: 200px;       /* Ukuran tetap */
+    height: 200px;      /* Tinggi tetap */
+    object-fit: cover;  /* Memotong gambar agar pas */
+    margin: auto;       /* Agar gambar tetap di tengah */
+}
+
+.product .row .product-card .product-card-title {
+    margin: 1rem auto 0.5rem;
+}
+
+/* about */
+.sejarah {
+    background: #ffffff;
+    border: 1px solid  #ffffff;
+    padding: 25px;
+    max-width: 1200px;
+    margin: 30px auto;
+    margin-top: 10px;
+    line-height: 1.9;
+}
+
+.sejarah h1 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.sejarah h1::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 5px;
+    background: #ffffff;
+    margin: 12px auto 0;
+    border-radius: 3px;
+}
+
+.sejarah p {
+    text-align: justify;
+    margin-bottom: 20px;
+    font-size: 1.15em;
+    padding: 15px;
+    background: #ffffff;
+    border-radius: 10px;
+}
+
+.step {
+    background-color: #bfddd2;
+}
+
+.footer {
+    background-color: #5da295;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: -100px; /* Agar footer tetap di bagian bawah */
+}

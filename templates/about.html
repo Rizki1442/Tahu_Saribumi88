@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% block title %}Tahu Saribumi - About{% endblock %}</title>
+
+  <!-- Include AOS CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <!-- Include AOS JS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap"
+    rel="stylesheet" />
+  <!-- Include Bootstrap JS (this is necessary for dropdown functionality) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+
+<body>
+  <!-- Navbar -->
+  <div class="navbar bg-base-100 z-50">
+    <div class="flex-1">
+      <img src="../static/img/tahu.png" alt="Logo" width="50" height="50" class="d-inline-block align-text-center" />
+      <a class="navbar-brand" href="/">Tahu Saribumi</a>
+    </div>
+
+    <!-- Menu untuk Desktop -->
+    <div class="hidden lg:flex">
+      <ul class="menu menu-horizontal px-1 space-x-1 text-white">
+        <li><a href="{{ url_for('home') }}"
+            class="hover:bg-warning px-3 hover:text-black py-2 rounded-lg font-bold">Home</a></li>
+        <li><a href="{{ url_for('about') }}"
+            class="hover:bg-black px-3 hover:text-black py-2 rounded-lg font-bold text-warning">About</a></li>
+        <li><a href="{{ url_for('menu') }}"
+            class="hover:bg-warning px-3 hover:text-black py-2 rounded-lg font-bold">Menu</a></li>
+        <li><a href="{{ url_for('lokasi') }}"
+            class="hover:bg-warning px-3 hover:text-black py-2 rounded-lg font-bold">Lokasi</a></li>
+        <li><a href="{{ url_for('proses_pembuatan') }}"
+            class="hover:bg-warning px-3 hover:text-black py-2 rounded-lg font-bold">Proses Pembuatan</a></li>
+      </ul>
+    </div>
+
+    <!-- Menu untuk Mobile -->
+    <div class="dropdown dropdown-end lg:hidden">
+      <label tabindex="0" class="btn btn-ghost">
+        <svg xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6 transform transition-all duration-300 ease-in-out hover:scale-110 active:scale-100 active:shadow-lg"
+          fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </label>
+      <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 rounded-box w-52 text-white font-bold">
+        <li><a href="{{ url_for('home') }}" class="hover:bg-warning hover:text-black">Home</a></li>
+        <li><a href="{{ url_for('about') }}" class="text-warning hover:bg-black hover:text-black">About</a></li>
+        <li><a href="{{ url_for('menu') }}" class="hover:bg-warning hover:text-black">Menu</a></li>
+        <li><a href="{{ url_for('lokasi') }}" class="hover:bg-warning hover:text-black">Lokasi</a></li>
+        <li><a href="{{ url_for('proses_pembuatan') }}" class="hover:bg-warning hover:text-black">Proses Pembuatan</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  </div>
+
+  <body>
+    <div class="sejarah">
+      <h1 class="text-warning" data-aos="fade-down">Sejarah Tahu Saribumi</h1>
+      <p data-aos="fade-up">Tahu Saribumi 88A berdiri sejak rest area 88 berdiri, yang tadinya hutan berubah menjadi
+        tempat istirahat. Tahu Saribumi 88A merupakan cabang dari Tahu Saribumi yang ada diSumedang. Sejak saat itu
+        banyak orang yang mulai mengenal Tahu Saribumi.</p>
+      <p data-aos="fade-up">Dengan menggunakan resep turun-temurun dan proses pembuatan yang higienis, Tahu Saribumi
+        berhasil menarik perhatian masyarakat luas. Produk kami tidak hanya terkenal di pasar lokal, tetapi juga telah
+        merambah ke berbagai daerah di Indonesia.</p>
+      <p data-aos="fade-up">Hingga saat ini, Tahu Saribumi terus berinovasi untuk menghadirkan produk tahu yang sehat,
+        lezat, dan berkualitas tinggi, tanpa menghilangkan nilai tradisi yang menjadi ciri khas kami.</p>
+    </div>
+  </body>
+
+</html>
+
+<!-- Main Content -->
+<div class="container mt-5">{% block content %}{% endblock %}</div>
+
+<!-- Footer -->
+<footer class="footer footer-center bg-base-200 text-base-content rounded p-10 mt-0">
+  <nav class="grid grid-flow-col gap-4">
+    <a class="link link-hover" href="{{ url_for('about') }}">About</a>
+    <a class="link link-hover" href="{{ url_for('menu') }}">Menu</a>
+    <a class="link link-hover" href="{{ url_for('lokasi') }}">Lokasi</a>
+    <a class="link link-hover" href="{{ url_for('proses_pembuatan') }}">Proses Pembuatan</a>
+  </nav>
+  <nav>
+    <div class="grid grid-flow-col gap-0 translate-y-[-10px] relative">
+      <a href="{{ url_for('home') }}"><img src="../static/img/tahu.png" alt="Instagram Icon"
+          class="w-16 h-16 object-contain transform transition-all duration-300 hover:scale-110" /></a>
+    </div>
+  </nav>
+  <aside>
+    <p>Copyright © 2025 Tahu Sumedang Saribumi</p>
+  </aside>
+</footer>
+
+<script src="./assets/vendor/aos/dist/aos.js"></script>
+<script>
+  // Initialize AOS
+  AOS.init();
+</script>
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Custom JS -->
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>
