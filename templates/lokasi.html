@@ -40,51 +40,49 @@
 </head>
 
 <body>
-
-
-  <!-- Navbar -->
-  <div class="navbar bg-base-100 z-50">
-    <div class="flex-1">
-      <img src="../static/img/tahu.png" alt="Logo" width="50" height="50" class="d-inline-block align-text-center" />
-      <a class="navbar-brand" href="/">Tahu Saribumi</a>
-    </div>
-
-    <!-- Menu untuk Desktop -->
-    <div class="hidden lg:flex">
-      <ul class="menu menu-horizontal px-1 space-x-1 text-white">
-        <li><a href="{{ url_for('home') }}"
-            class="hover:bg-warning px-3 hover:text-black py-2 rounded-lg font-bold">Home</a></li>
-        <li><a href="{{ url_for('about') }}"
-            class="hover:bg-warning px-3 hover:text-black py-2 rounded-lg font-bold">About</a></li>
-        <li><a href="{{ url_for('menu') }}"
-            class="hover:bg-warning px-3 hover:text-black py-2 rounded-lg font-bold">Menu</a></li>
-        <li><a href="{{ url_for('lokasi') }}"
-            class="hover:bg-black px-3 hover:text-black py-2 rounded-lg font-bold text-warning">Lokasi</a></li>
-        <li><a href="{{ url_for('proses_pembuatan') }}"
-            class="hover:bg-warning px-3 hover:text-black py-2 rounded-lg font-bold">Proses Pembuatan</a></li>
-      </ul>
-    </div>
-
-    <!-- Menu untuk Mobile -->
-    <div class="dropdown dropdown-end lg:hidden">
-      <label tabindex="0" class="btn btn-ghost">
-        <svg xmlns="http://www.w3.org/2000/svg"
-          class="h-6 w-6 transform transition-all duration-300 ease-in-out hover:scale-110 active:scale-100 active:shadow-lg"
-          fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-      </label>
-      <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 rounded-box w-52 text-white font-bold">
-        <li><a href="{{ url_for('home') }}" class="hover:bg-warning hover:text-black">Home</a></li>
-        <li><a href="{{ url_for('about') }}" class="hover:bg-warning hover:text-black">About</a></li>
-        <li><a href="{{ url_for('menu') }}" class="hover:bg-warning hover:text-black">Menu</a></li>
-        <li><a href="{{ url_for('lokasi') }}" class="text-warning hover:bg-black hover:text-black">Lokasi</a></li>
-        <li><a href="{{ url_for('proses_pembuatan') }}" class="hover:bg-warning hover:text-black">Proses Pembuatan</a>
-        </li>
-      </ul>
-    </div>
+<!-- Navbar -->
+<div class="navbar bg-base-100 z-50">
+  <div class="flex-1">
+    <img src="../static/img/tahu.png" alt="Logo" width="50" height="50" class="d-inline-block align-text-center" />
+    <a class="navbar-brand" href="/">Tahu Saribumi</a>
   </div>
+
+  <!-- Menu untuk Desktop -->
+  <div class="hidden lg:flex">
+    <ul class="menu menu-horizontal px-1 space-x-1 text-white">
+      <li><a href="{{ url_for('home') }}"
+          class="hover:bg-warning px-3 hover:text-black py-2 rounded-lg font-bold">Home</a></li>
+      <li><a href="{{ url_for('about') }}"
+          class="hover:bg-warning px-3 hover:text-black py-2 rounded-lg font-bold">About</a></li>
+      <li><a href="{{ url_for('menu') }}"
+          class="hover:bg-warning px-3 hover:text-black py-2 rounded-lg font-bold">Menu</a></li>
+      <li><a href="{{ url_for('lokasi') }}"
+          class="hover:bg-black px-3 hover:text-black py-2 rounded-lg font-bold text-warning">Lokasi</a></li>
+      <li><a href="{{ url_for('proses_pembuatan') }}"
+          class="hover:bg-warning px-3 hover:text-black py-2 rounded-lg font-bold">Proses Pembuatan</a></li>
+    </ul>
   </div>
+
+  <!-- Menu untuk Mobile -->
+  <div class="dropdown dropdown-end lg:hidden">
+    <label tabindex="0" class="btn btn-ghost">
+      <svg xmlns="http://www.w3.org/2000/svg"
+        class="h-6 w-6 transform transition-all duration-300 ease-in-out hover:scale-110 active:scale-100 active:shadow-lg"
+        fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </label>
+    <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 rounded-box w-52 text-white font-bold">
+      <li><a href="{{ url_for('home') }}" class="hover:bg-warning hover:text-black">Home</a></li>
+      <li><a href="{{ url_for('about') }}" class="hover:bg-warning hover:text-black">About</a></li>
+      <li><a href="{{ url_for('menu') }}" class="hover:bg-warning hover:text-black">Menu</a></li>
+      <li><a href="{{ url_for('lokasi') }}" class="text-warning hover:bg-black hover:text-black">Lokasi</a></li>
+      <li><a href="{{ url_for('proses_pembuatan') }}" class="hover:bg-warning hover:text-black">Proses Pembuatan</a>
+      </li>
+    </ul>
+  </div>
+</div>
+</div>
 
   <style>
     /* Menambahkan z-index pada navbar agar tetap di atas peta */
