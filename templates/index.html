@@ -26,7 +26,7 @@
 
 </head>
 
-<body>
+<body class="font-sans">
   <!-- Navbar -->
   <div class="navbar bg-base-100 z-50">
     <div class="flex-1">
@@ -37,8 +37,8 @@
     <!-- Menu untuk Desktop -->
     <div class="hidden lg:flex">
       <ul class="menu menu-horizontal px-1 space-x-1 text-white">
-        <li><a href="{{ url_for('home') }}" class="hover:bg-black px-3 py-2 rounded-lg font-bold text-warning">Home</a>
-        </li>
+        <li><a href="{{ url_for('home') }}"
+            class="hover:bg-black px-3 hover:text-black py-2 rounded-lg font-bold text-warning">Home</a></li>
         <li><a href="{{ url_for('about') }}"
             class="hover:bg-warning px-3 hover:text-black py-2 rounded-lg font-bold">About</a></li>
         <li><a href="{{ url_for('menu') }}"
@@ -71,52 +71,49 @@
   </div>
   </div>
 
-  <div class="hero">
-    <div class="hero-text" data-aos="fade-right">
-      <h1>
-        <span class="highlight text-warning">Tahu Saribumi</span> Makanan Khas Kota
-        Sumedang
-      </h1>
-      <p>
-        Untuk rasa gausah ditayain, kalian bisa mencobanya sendiri.
+  <!-- Hero Section -->
+  <div class="hero bg-base-200 min-h-screen">
+  <div class="hero-content flex-col lg:flex-row-reverse">
+    <img
+      src="../static/img/Tahu1.png"
+      class="Tahu1 max-w-sm rounded-lg"/>
+    <div>
+      <h1 class="text-5xl font-bold"><span class="highlight text-warning">Tahu Saribumi</span> Makanan Khas Kota Sumedang</h1>
+      <p class="py-2">
+        Untuk rasa gausah ditanyain, kalian bisa mencobanya sendiri. Dengan datang kewarungnya langsung!
       </p>
+      <a href="https://www.instagram.com/saribumi88a?igsh=MTg0dHZxYml2bmYxYw%3D%3D&utm_source=qr"  target="_blank"><button class="btn btn-warning font-bold mt-3">instagram</button></a>
     </div>
-    <img src="../static/img/Tahu1.png" alt="Tahu Image" class="hero-image" data-aos="fade-left" />
   </div>
+</div>
 
-  <div class="pembuatan-tahu">
+  <!-- Proses Pembuatan Section -->
+  <div class="pembuatan-tahu mt-10 px-4">
     <a href="{{ url_for('proses_pembuatan') }}">
-      <h2
-        class="text-decoration-none text-center mb-4 transform transition-all duration-300 ease-in-out hover:scale-110">
+      <h2 class="text-3xl font-bold text-center mb-4 transform transition-all duration-300 ease-in-out hover:scale-110">
         Proses Pembuatan Tahu</h2>
     </a>
-    <div class="row justify-content-center">
-      <div class="col-12 col-md-4 mb-4">
-        <div class="image-container"> 
-          <a  href="{{ url_for('proses_pembuatan') }}#kedelai"><img src="../static/img/kedelai.jpg" alt="Foto 1"
-            class="img-fluid transform transition-all duration-300 ease-in-out hover:scale-110"/></a>
-          <div class="overlay-text" data-aos="fade-up">Kedelai Mentah yang belum diolah</div>
-        </div>
-      </div>
-      <div class="col-12 col-md-4 mb-4 ">
-        <div class="image-container">
-          <a href="{{ url_for('proses_pembuatan') }}#pencetakan"><img src="../static/img/tahu-mentah.jpg" alt="Foto 2"
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="image-container">
+        <a href="{{ url_for('proses_pembuatan') }}#kedelai"><img src="../static/img/kedelai.jpg" alt="Foto 1"
             class="img-fluid transform transition-all duration-300 ease-in-out hover:scale-110" /></a>
-          <div class="overlay-text" data-aos="fade-up">Tahu yang sudah diolah</div>
-        </div>
+        <div class="overlay-text" data-aos="fade-up">Kedelai Mentah yang belum diolah</div>
       </div>
-      <div class="col-12 col-md-4 mb-4">
-        <div class="image-container">
-          <a href="{{ url_for('proses_pembuatan') }}#penggorengan"><img src="../static/img/tahu-goreng.jpg" alt="Foto 3"
+      <div class="image-container">
+        <a href="{{ url_for('proses_pembuatan') }}#pencetakan"><img src="../static/img/tahu-mentah.jpg" alt="Foto 2"
             class="img-fluid transform transition-all duration-300 ease-in-out hover:scale-110" /></a>
-          <div class="overlay-text" data-aos="fade-up">Tahu Saribumi yang Dihidangkan</div>
-        </div>
+        <div class="overlay-text" data-aos="fade-up">Tahu yang sudah diolah</div>
+      </div>
+      <div class="image-container">
+        <a href="{{ url_for('proses_pembuatan') }}#penggorengan"><img src="../static/img/tahu-goreng.jpg" alt="Foto 3"
+            class="img-fluid transform transition-all duration-300 ease-in-out hover:scale-110" /></a>
+        <div class="overlay-text" data-aos="fade-up">Tahu Saribumi yang Dihidangkan</div>
       </div>
     </div>
   </div>
 
   <!-- Main Content -->
-  <div class="container mt-5">{% block content %}{% endblock %}</div>
+  <div class="container mt-5 px-4">{% block content %}{% endblock %}</div>
 
   <!-- Footer -->
   <footer class="footer footer-center bg-base-200 text-base-content rounded p-10 mt-0">
