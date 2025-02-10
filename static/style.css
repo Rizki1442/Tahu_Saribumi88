@@ -31,24 +31,11 @@ body {
 }
 
 .hero {
-    margin-top: -100px;
-    display: flex; /* Menggunakan Flexbox untuk tata letak */
-    align-items: center; /* Vertikal centering untuk teks dan gambar */
-    justify-content: space-between; /* Mengatur agar elemen berada di kiri */
-    padding: 20px;
-    margin-bottom: -100px;
-    background-color: #bfddd2;
-    height: 100vh;
-    width: 100%;
+   background-color: #bfddd2;   
 }
 
-/* Styling untuk gambar */
-.hero-image {
-    width: 500px; /* Ukuran gambar */
-    height: auto;
-    margin-top: 100px;
-    border-radius: 8px; /* Menambahkan sudut melengkung pada gambar */
-    flex-shrink: 0; /* Gambar tidak akan menyusut */
+.Tahu1 {
+    height: 100%;
 }
 
 /* Styling untuk teks */
@@ -65,7 +52,7 @@ body {
 }
 
 .hero p {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     color: #555;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-style: italic;
