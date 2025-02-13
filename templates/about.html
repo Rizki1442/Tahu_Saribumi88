@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{% block title %}Tahu Saribumi - About{% endblock %}</title>
-
+  <link rel="icon" href="../static/img/tahu.png" type="image/x-icon">
   <!-- Include AOS CSS -->
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
@@ -47,6 +47,15 @@
             class="hover:bg-warning px-3 hover:text-black py-2 rounded-lg font-bold">Lokasi</a></li>
         <li><a href="{{ url_for('proses_pembuatan') }}"
             class="hover:bg-warning px-3 hover:text-black py-2 rounded-lg font-bold">Proses Pembuatan</a></li>
+            <li>
+              <details>
+                  <summary class="documentasi hover:bg-warning px-3 hover:text-black py-2 rounded-lg font-bold">Documentasi</summary>
+                  <ul class="documentasi p-2">
+                    <li><a href="{{ url_for('erd_bahasa') }}#erd" class="hover:bg-warning hover:text-black">ERD</a></li>
+                    <li><a href="{{ url_for('erd_bahasa') }}#bahasa" class="hover:bg-warning hover:text-black">Bahasa</a></li>
+                  </ul>
+                </details>
+          </li>
       </ul>
     </div>
 
@@ -66,23 +75,39 @@
         <li><a href="{{ url_for('lokasi') }}" class="hover:bg-warning hover:text-black">Lokasi</a></li>
         <li><a href="{{ url_for('proses_pembuatan') }}" class="hover:bg-warning hover:text-black">Proses Pembuatan</a>
         </li>
+        <li>
+          <details>
+              <summary class="documentasi hover:bg-warning px-3 hover:text-black py-2 rounded-lg font-bold">Documentasi</summary>
+              <ul class="documentasi p-2">
+                <li><a href="{{ url_for('erd_bahasa') }}#erd" class="hover:bg-warning hover:text-black">ERD</a></li>
+                <li><a href="{{ url_for('erd_bahasa') }}#bahasa" class="hover:bg-warning hover:text-black">Bahasa</a></li>
+              </ul>
+            </details>
+      </li>
       </ul>
     </div>
   </div>
   </div>
 
   <body>
-    <div class="sejarah">
-      <h1 class="text-warning" data-aos="fade-down">Sejarah Tahu Saribumi</h1>
-      <p data-aos="fade-up">Tahu Saribumi 88A berdiri sejak rest area 88 berdiri, yang tadinya hutan berubah menjadi
-        tempat istirahat. Tahu Saribumi 88A merupakan cabang dari Tahu Saribumi yang ada diSumedang. Sejak saat itu
-        banyak orang yang mulai mengenal Tahu Saribumi.</p>
-      <p data-aos="fade-up">Dengan menggunakan resep turun-temurun dan proses pembuatan yang higienis, Tahu Saribumi
-        berhasil menarik perhatian masyarakat luas. Produk kami tidak hanya terkenal di pasar lokal, tetapi juga telah
-        merambah ke berbagai daerah di Indonesia.</p>
-      <p data-aos="fade-up">Hingga saat ini, Tahu Saribumi terus berinovasi untuk menghadirkan produk tahu yang sehat,
-        lezat, dan berkualitas tinggi, tanpa menghilangkan nilai tradisi yang menjadi ciri khas kami.</p>
+    <div class="sejarah bg-gradient-to-r from-teal-400 to-teal-600 text-white rounded-xl p-8 max-w-4xl mx-auto mt-10">
+      <h1 class="text-3xl font-extrabold mb-6 text-center" data-aos="fade-down">Sejarah tahu saribumi</h1>
+      
+      <div class="space-y-6">
+        <p class="text-lg text-gray-800" data-aos="fade-up">
+          Tahu Saribumi 88A berdiri sejak rest area 88 berdiri, yang tadinya hutan berubah menjadi tempat istirahat. Tahu Saribumi 88A merupakan cabang dari Tahu Saribumi yang ada di Sumedang. Sejak saat itu banyak orang yang mulai mengenal Tahu Saribumi.
+        </p>
+        
+        <p class="text-lg text-gray-800" data-aos="fade-up">
+          Dengan menggunakan resep turun-temurun dan proses pembuatan yang higienis, Tahu Saribumi berhasil menarik perhatian masyarakat luas. Produk kami tidak hanya terkenal di pasar lokal, tetapi juga telah merambah ke berbagai daerah di Indonesia.
+        </p>
+        
+        <p class="text-lg text-gray-800" data-aos="fade-up">
+          Hingga saat ini, Tahu Saribumi terus berinovasi untuk menghadirkan produk tahu yang sehat, lezat, dan berkualitas tinggi, tanpa menghilangkan nilai tradisi yang menjadi ciri khas kami.
+        </p>
+      </div>
     </div>
+    
   </body>
 
 </html>
@@ -121,3 +146,4 @@
 </body>
 
 </html>
+
