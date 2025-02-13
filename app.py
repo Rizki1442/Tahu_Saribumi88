@@ -22,5 +22,9 @@ def lokasi():
 def proses_pembuatan():
     return render_template('proses-pembuatan.html')
 
+@app.route('/erd_bahasa')
+def erd_bahasa():
+    return render_template('erd_bahasa.html')
+
 if __name__ == '__main__':
     app.run(debug=True)
