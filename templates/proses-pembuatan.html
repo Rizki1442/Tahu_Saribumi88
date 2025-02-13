@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{% block title %}Tahu Saribumi - Proses Pembuatan{% endblock %}</title>
-
+  <link rel="icon" href="../static/img/tahu.png" type="image/x-icon">
   <!-- Include AOS CSS -->
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
@@ -48,6 +48,15 @@
         <li><a href="{{ url_for('proses_pembuatan') }}"
             class="hover:bg-black px-3 hover:text-black py-2 rounded-lg font-bold text-warning">Proses Pembuatan</a>
         </li>
+        <li>
+          <details>
+              <summary class="documentasi hover:bg-warning px-3 hover:text-black py-2 rounded-lg font-bold">Documentasi</summary>
+              <ul class="documentasi p-2">
+                <li><a href="{{ url_for('erd_bahasa') }}#erd" class="hover:bg-warning hover:text-black">ERD</a></li>
+                <li><a href="{{ url_for('erd_bahasa') }}#bahasa" class="hover:bg-warning hover:text-black">Bahasa</a></li>
+              </ul>
+            </details>
+      </li>
       </ul>
     </div>
 
@@ -67,6 +76,15 @@
         <li><a href="{{ url_for('lokasi') }}" class="hover:bg-warning hover:text-black">Lokasi</a></li>
         <li><a href="{{ url_for('proses_pembuatan') }}" class="text-warning hover:bg-black hover:text-black">Proses
             Pembuatan</a></li>
+            <li>
+              <details>
+                  <summary class="documentasi hover:bg-warning px-3 hover:text-black py-2 rounded-lg font-bold">Documentasi</summary>
+                  <ul class="documentasi p-2">
+                    <li><a href="{{ url_for('erd_bahasa') }}#erd" class="hover:bg-warning hover:text-black">ERD</a></li>
+                    <li><a href="{{ url_for('erd_bahasa') }}#bahasa" class="hover:bg-warning hover:text-black">Bahasa</a></li>
+                  </ul>
+                </details>
+          </li>
       </ul>
     </div>
   </div>
